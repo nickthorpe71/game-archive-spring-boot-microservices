@@ -1,6 +1,7 @@
 package com.los.gamecatalogservice.resources;
 
-import com.los.gamecatalogservice.models.CatalogueItem;
+import com.los.gamecatalogservice.models.CatalogItem;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,12 +10,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/catalog")
-public class GameCatalogueResource {
+public class GameCatalogResource {
 
-    public List<CatalogueItem> getCatalogue(String userId){
+    @RequestMapping("/{userId}")
+    public List<CatalogItem> getCatalog(@PathVariable("userId") String userId){
 
         return Collections.singletonList(
-                new CatalogueItem("The Forest", "Test", 4)
+                new CatalogItem("The Forest", "Test", 4)
         );
     }
 }

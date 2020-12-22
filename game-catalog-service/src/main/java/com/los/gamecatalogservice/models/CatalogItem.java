@@ -1,12 +1,12 @@
 package com.los.gamecatalogservice.models;
 
-public class CatalogueItem {
+public class CatalogItem {
 
     private String name;
     private String description;
     private int rating;
 
-    public CatalogueItem(String name, String description, int rating) {
+    public CatalogItem(String name, String description, int rating) {
         this.name = name;
         this.description = description;
         this.rating = rating;
